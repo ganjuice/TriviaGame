@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trivia Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div id= "container">
+		<h1>Cryptocurrency Trivia!</h1>
+		<button id="startButton">Start</button>
+		
+		<form id="questions">
+			<div id="timer"><h2>Time Remaining:<h2><span id= "timeLeft"></span></div>
+			<fieldset id="question1" class= "question">
+				<h2>Blockchain is a...</h2>
+				<input type="radio" name="q1" value="right">DLT (Distributed Ledger Technology)
+				<input type="radio" name="q1" value="wrong">BLT (Bacon Lettuce Tomato)
+				<input type="radio" name="q1" value="wrong">KFC (Kentucky Fried Cicken)
+				<input type="radio" name="q1" value="wrong">Centralized Database
+			</fieldset>
+			<fieldset id="question2" class= "question">
+				<h2>A database running on the web is most often using...</h2>
+				<input type="radio" name="q2" value="right">a client-server network architecture
+				<input type="radio" name="q2" value="wrong">magic
+				<input type="radio" name="q2" value="wrong">trickery
+				<input type="radio" name="q2" value="wrong">sorcery
+			</fieldset>
+			<fieldset id="question3" class= "question">
+				<h2>Blockchain is designed to be an...</h2>
+				<input type="radio" name="q3" value="right">append only structure
+				<input type="radio" name="q3" value="wrong">delete only structure
+				<input type="radio" name="q3" value="wrong">replace only structure
+				<input type="radio" name="q3" value="wrong">move only structure
+			</fieldset>
+			<fieldset id="question4" class= "question">
+				<h2>By storing data across its network,...</h2>
+				<input type="radio" name="q4" value="right">the blockchain eliminates risks that come with the data being held centrally
+				<input type="radio" name="q4" value="wrong">the blockchain disappears
+				<input type="radio" name="q4" value="wrong">the blockchain gets tired
+				<input type="radio" name="q4" value="wrong">the blockchain breaks
+			</fieldset>
+			<fieldset id="question5" class= "question">
+				<h2>Blockchain arose from</h2>
+				<input type="radio" name="q5" value="right">Bitcoin
+				<input type="radio" name="q5" value="wrong">blocks
+				<input type="radio" name="q5" value="wrong">chains
+				<input type="radio" name="q5" value="wrong">the need to block chains
+			</fieldset>
+			<button id="doneButton">Done</button>
+		</form>
+		<div id="scoreBoard">
+			<h2>All Done!</h2>
+			<h3>Correct Answers:<span id="numberCorrect">0</span><h3>
+			<h3>Incorrect Answers:<span id="numberIncorrect">0</span></h3>
+			<h3>Unanswered:<span id="numberUnanswered">0</span></h3>
+		</div>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
