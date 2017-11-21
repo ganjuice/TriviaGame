@@ -1,6 +1,6 @@
 //GLOBAL VARIABLES
 //=================================================================================
-var time = 60
+var time = 6
 var totalCorrect = 0;
 var totalWrong = 0;
 var totalUnanswered = 0;
@@ -9,6 +9,7 @@ var response2
 var response3 
 var response4 
 var response5 
+var timer
 
 //FUNCTIONS (blocks of code I will call upon when needed)
 //==================================================================================
@@ -16,9 +17,15 @@ var response5
 function shotclock(){if (time>0) {
 	time--;
 	$("#timeLeft").html(time + " Seconds")
+	}else {
+	clearInterval(timer)
+	record();
+	check();
+	grade();
+	$("form").hide();
+	$("#scoreBoard").show();
 	}
 }
-
 function record(){
 	response1 = $('input:radio[name="q1"]:checked').val();
 	response2 = $('input:radio[name="q2"]:checked').val();
@@ -93,7 +100,7 @@ $(document).ready(function(){
 $("#startButton").click(function(){
 	$("#startButton").hide();
 	$("form").show();
-	setInterval(shotclock,1000)
+	timer = setInterval(shotclock,1000)
 });
 $("#doneButton").click(function(){
 	event.preventDefault()
@@ -103,10 +110,3 @@ $("#doneButton").click(function(){
 	$("form").hide();
 	$("#scoreBoard").show();
 });
-if(time == 0){
-	record();
-	check();
-	grade();
-	$("form").hide();
-	$("#scoreBoard").show();
-	};
