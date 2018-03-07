@@ -1,6 +1,6 @@
 //GLOBAL VARIABLES
 //=================================================================================
-var time = 6
+var time = 45
 var totalCorrect = 0;
 var totalWrong = 0;
 var totalUnanswered = 0;
